@@ -5,10 +5,10 @@ const contenedor4 = document.querySelector('.con-6');
 const contenedor5 = document.querySelector('.con-7');
 
 const getUrl = new URLSearchParams(window.location.search);
-const id = getUrl.get('id'); // id=1, id=2, ...
+const id = getUrl.get('id'); 
 const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
 
-fetch(url, { //`${url}/${id}`
+fetch(url, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "94c5c74304msh6b060db7c2a4341p1f01ecjsnddcc11168a4b",
