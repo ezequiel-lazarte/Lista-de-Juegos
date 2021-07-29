@@ -1,0 +1,172 @@
+:root {
+    --color1: rgb(70, 70, 70);
+    --color2: rgb(39, 39, 39);
+    --color3: rgb(247, 60, 60);
+    --color4: cyan;
+    --color5: white;
+    --color6: red;
+    --color7: black;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+footer {
+    width: 100%;
+    height: 10em;
+    border: 0.3em solid var(--color2);
+    border-top: 0;
+    font-weight: 700;
+    color: var(--color7);
+}
+
+a {
+    color: var(--color5);
+}
+
+a:hover {
+    transition: 0.5s;
+    color: var(--color4) !important;
+}
+
+a:visited {
+    color: var(--color5);
+}
+
+.principal-1 {
+    margin-bottom: -0.3em;
+}
+
+.list-group {
+    padding-top: 4.7em;
+    padding-bottom: 0.4em;
+}
+
+.text-1, .text-2 {
+    margin: 0.4em;
+}
+
+.text-3{
+    margin: 0.35em;
+}
+
+.col-2 {
+    text-align: center;
+}
+
+.title {
+    padding: 0.5em;
+    color: var(--color3);
+    background-color: var(--color7);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.li {
+    text-shadow: 0.2em 0.2em 0.2em var(--color7);
+    width: 30em;
+}
+
+.button-li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+}
+
+.button-li:hover {
+    transition: 0.6s;
+    background-color: var(--color6);
+}
+
+.linkedin-logo {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+/********** Estilos de pagina juego ********/
+.con-1 {
+    margin-top: 10em;
+}
+
+.con-2 {
+    display: flex;
+}
+/*
+.con-4 {
+    border: 0.2em solid var(--color5);
+    padding: 3em;
+    background-color: var(--color7);
+}
+
+.img-juego {
+    margin: 3em 3em 3em 0em;
+    border: 0.2em solid var(--color7);
+    height: 20em;
+}
+*/
+.descripcion, .genero, .plataforma, .fecha {
+    color: var(--color5);
+    font-family: 'Courier New', Courier, monospace;
+    /*
+    margin-top: 1em;
+    margin-left: -1em;
+    */
+}
+/*
+.descripcion {
+    text-align: justify;
+}
+
+.fecha {
+    margin-top: 3.2em;
+}
+*/
+/********** media queries ***********/
+
+@media (max-width: 700px) {
+    .principal-1 {
+        margin-bottom: -0.4em;
+    }
+
+    .li {
+        font-size: 0.7em;
+    }
+
+    .list-group {
+        padding-top: 4.3em;
+    }
+}
+
+@media (max-width: 995px) {
+    .con-2 {
+        display: inline;
+    }
+
+    .img-juego {
+        width: 80%;
+        height: auto;
+        display:block;
+        margin-top: -5em;
+        margin-bottom: 3em;
+    }
+}
+
+@media (max-width: 760px) {
+    .con-2 {
+        display: inline;
+        align-items: center;
+    }
+
+    .img-juego {
+        width: 80%;
+        height: auto;
+        margin-top: -8em;
+        margin-bottom: 2em;
+    }
+}
