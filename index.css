@@ -98,12 +98,6 @@ a:visited {
     display: flex;
 }
 
-.img-juego {
-    margin: 3em 3em 3em 0em;
-    border: 0.2em solid var(--color7);
-    height: 20em;
-}
-
 .descripcion, .genero, .plataforma, .fecha {
     color: var(--color5);
     font-family: 'Courier New', Courier, monospace;
