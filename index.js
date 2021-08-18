@@ -20,7 +20,7 @@ fetch(url, {
         li.innerText = juego.title;
         button.innerText = 'Ver Mas';
         button.addEventListener('click', () => {
-            window.location.href = `./juego.html?id=${juego.id}`;
+            window.location.href = `./juego.html?id=${juego.id-1}`;
         });
         li.appendChild(button);
         ul.appendChild(li);
