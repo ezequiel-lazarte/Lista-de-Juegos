@@ -5,9 +5,12 @@ const contenedor4 = document.querySelector('.con-6');
 const contenedor5 = document.querySelector('.con-7');
 const btnVolver = document.querySelector('.btn-1');
 
-const getUrl = new URLSearchParams(window.location.search);
-const id = getUrl.get('id');
-const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+console.log(id);
+const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
+
+let contador = 0;
 
 btnVolver.addEventListener('click', () => {
     window.location.href = `..`;
@@ -21,24 +24,23 @@ fetch(url, {
 	}
 })
 .then(data => {return data.json()})
-.then(juegos => {
+.then(juego => {
     const img = document.createElement('img');
     const titulo = document.createElement('p');
     const descripcion = document.createElement('p');
     const genero = document.createElement('p');
     const fecha = document.createElement('p');
 
-
-    img.src = juegos[id].thumbnail;
-    img.alt = juegos[id].title;
+    img.src = juego.thumbnail;
+    img.alt = juego.title;
     img.className = "img-juego img-thumbnai";
-    titulo.innerText = juegos[id].title;
+    titulo.innerText = juego.title;
     titulo.className = "parrafo fs-4";
-    descripcion.innerText = juegos[id].short_description;
+    descripcion.innerText = juego.short_description;
     descripcion.className = "parrafo";
-    genero.innerText = `${juegos[id].platform}, ${juegos[id].genre}`;
+    genero.innerText = `${juego.platform}, ${juego.genre}`;
     genero.className = "parrafo";
-    fecha.innerText = juegos[id].release_date;
+    fecha.innerText = juego.release_date;
     fecha.className = "parrafo";
 
     contenedor1.appendChild(img);
